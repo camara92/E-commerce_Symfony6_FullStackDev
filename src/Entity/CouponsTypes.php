@@ -18,6 +18,7 @@ class CouponsTypes
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
+        // nullable false et la possibilité de supprimer des orphelins 
     #[ORM\OneToMany(mappedBy: 'coupons_types', targetEntity: Coupons::class, orphanRemoval: true)]
     private Collection $coupons;
 
