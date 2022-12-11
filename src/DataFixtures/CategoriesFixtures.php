@@ -2,6 +2,8 @@
 
 namespace App\DataFixtures;
 
+
+// use Faker;
 use App\Entity\Categories; 
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -38,13 +40,15 @@ class CategoriesFixtures extends Fixture
 
         // Modes 
         $parent = $this->createCategory('Modes' ,null, $manager );
-        
+
         $category = $this->createCategory('Hommes', $parent, $manager);
         $category = $this->createCategory('Femmes', $parent, $manager);
         $category = $this->createCategory('Enfants', $parent, $manager);
        
 
         $manager->persist($category);
+
+       
 
         $manager->flush();
     }
