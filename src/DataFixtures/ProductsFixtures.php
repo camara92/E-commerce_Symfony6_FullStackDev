@@ -7,8 +7,9 @@ use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Symfony\Component\String\Slugger\SluggerInterface;
 
-class ProductsFixtures extends Fixture
+class ProductsFixtures extends Fixture 
 {
+     
     public function __construct(private SluggerInterface $slugger )
     {
         
@@ -36,4 +37,5 @@ class ProductsFixtures extends Fixture
 
         $manager->flush();
     }
+    
 }
