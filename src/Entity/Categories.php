@@ -24,7 +24,7 @@ class Categories
     // nouvelle propriété 
 
     #[ORM\Column(type: 'integer')]
-    private ?string $categoryOrder;
+    private ?string $categoryOrder =null;
 
     #[ORM\ManyToOne(targetEntity: self::class, inversedBy: 'categories')]
     #[ORM\JoinColumn(onDelete:'CASCADE')]

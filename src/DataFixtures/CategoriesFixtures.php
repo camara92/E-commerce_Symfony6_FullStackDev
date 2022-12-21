@@ -3,7 +3,7 @@
 namespace App\DataFixtures;
 
 
-// use Faker;
+ use Faker;
 use App\Entity\Categories; 
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -31,7 +31,6 @@ class CategoriesFixtures extends Fixture
         // $category->setName('Ordinateur portables');
 
         $category = $this->createCategory('Ordinateur Portable', $parent, $manager);
-        $category = $this->createCategory('Ecrans', $parent, $manager);
         $category = $this->createCategory('Souris', $parent, $manager);
         $category = $this->createCategory('Chargeurs', $parent, $manager);
         $category = $this->createCategory('PC fixes', $parent, $manager);
@@ -53,11 +52,12 @@ class CategoriesFixtures extends Fixture
 
         $manager->flush();
     }
-    public function createCategory(string $name, Categories $parent = null , ObjectManager $manager){
+    public function createCategory(string $name, Categories $parent = null ,  ObjectManager $manager){
 
         $category = new Categories();
         // $category->setName('Ordinateur portables');
         $category->setName($name);
+        // $category->setCategoryOrder($categoryOrdder->numberBetween(1,12));
         $category->setSlug($this->slugger->slug(($category->getName()))->lower());
         $category->setParent($parent);
         $manager->persist($category);
