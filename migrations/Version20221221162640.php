@@ -20,8 +20,8 @@ final class Version20221221162640 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE categories CHANGE category_order category_order INT NOT NULL');
-        $this->addSql('ALTER TABLE users ADD is_verified TINYINT(1) NOT NULL');
+        $this->addSql('ALTER TABLE categories CHANGE category_order category_order INT  NULL');
+        $this->addSql('ALTER TABLE users ADD is_verified TINYINT(1)  NULL');
     }
 
     public function down(Schema $schema): void
