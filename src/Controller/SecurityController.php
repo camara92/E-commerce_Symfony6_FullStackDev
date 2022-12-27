@@ -120,7 +120,7 @@ class SecurityController extends AbstractController
                 'password_hasher' => $passwordHasherInterface,
             ]); 
         }
-        $this->addFlash('danger text-center', 'Jeton invalide 😒 ');
+        $this->addFlash('danger text-center', 'Jeton invalide 😒😒😒😒😒😒😒😒😒😒 ');
         return $this->redirectToRoute('app_login');
     }
 }
