@@ -13,9 +13,10 @@
 				{% endif %}
 
 				{% if app.user %}
-					<div class="mb-3">
-						Vous êtes connecté comme
-						{{ app.user.userIdentifier }},
+					<div class="mb-3">Bonjour {{ app.user.firstname }}  <hr>
+						
+						 Votre adresse email est : 	{{ app.user.UserIdentifier }},
+						<br>
 						<a href="{{ path('app_logout') }}">Déconnexion</a>
 					</div>
 				{% endif %}
@@ -40,6 +41,10 @@
 					Me connecter
 				</button>
 				<a class="btn btn-lg btn-secondary  mt-2" href="{{path('app_register')}}">M'inscrire
+					</a>
+					<hr> 
+					
+					<a class=" btn btn-lg btn-danger mt-2 text-decoration-none text-bold" href="{{path('reset_password')}}">Mot de passe oublié 
 					</a>
 			</form>
 		</div>
