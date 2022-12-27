@@ -1,4 +1,21 @@
-<p>La page que vous avez demandé n'existe pas ! <P>
+{% extends "base.html.twig" %}
 
-<hr>
-<a href="{{path('app_main')}}">Retour à l'accueil </a>
+{% block title %}Page non trouvée
+{% endblock %}
+
+
+{% block body %}
+
+	<div class="container">
+		<div class="row">
+                <h1 class="text-center font-weight-bolder text-uppercase border-danger radius">404 </h1>
+
+			<p class="bg-danger text-white p-5 font-weight-bold text-center ">La page que vous avez demandée n'existe pas !</p>
+			<p>
+
+				<hr>
+				<a class="btn btn-outline-primary " href="{{path('app_main')}}">Retour à l'accueil</a>
+			</p>
+		</div>
+	</div>
+{% endblock %}

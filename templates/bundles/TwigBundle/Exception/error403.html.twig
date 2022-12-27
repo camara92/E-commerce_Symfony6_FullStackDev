@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Page non trouvée
+{% endblock %}
+
+
+{% block body %}
+
+	<div class="container">
+		<div class="row">
+
+                <h1 class="text-center font-weight-bolder text-uppercase border-danger radius">403 </h1>
+			<p class="bg-danger text-white p-5 font-weight-bold text-center ">La page que vous avez demandé n'existe pas !</p>
+			<p>
+
+				<hr>
+				<a class="btn btn-outline-primary" href="{{path('app_main')}}">Retour à l'accueil</a>
+			</p>
+		</div>
+	</div>
+{% endblock %}
